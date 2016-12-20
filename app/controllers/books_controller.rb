@@ -6,11 +6,17 @@ class BooksController < ApplicationController
   end
 
   get('/books/new') do
+    @genres = Genre.all
     erb(:'books/new.html')
   end
 
   post '/books' do
-    @book = Book.create(params[:book])
+    @book = Book.create(params[:book] )
+
+    # params[:book][:genre_ids].each do |genre_id|
+    #   BookGenre.create(book_id: @book.id, genre_id: genre_id.to_i)
+    # end
+
     redirect "/books/#{@book.id}"
   end
 

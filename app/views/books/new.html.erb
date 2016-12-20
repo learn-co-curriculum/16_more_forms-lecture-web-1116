@@ -12,6 +12,10 @@
       <input type="text" name="book[title]">
       <label for="snippet">Snippet</label>
       <input type="text" name="book[snippet]">
+      <% @genres.each do |genre| %>
+        <label for=""><%= genre.name %></label>
+        <input type="checkbox" name="book[genre_ids][]" value="<%=genre.id %>">
+      <% end %>
       <input type="submit">
     </form>
   </body>

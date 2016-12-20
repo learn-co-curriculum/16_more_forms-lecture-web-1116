@@ -1,6 +1,7 @@
 ## Review Basic Forms
 
 1. Create a Genre with a Name
+  + As a user, I should be able to fill out a form with a genre name to create it...
 2. Add authors to our Book form
 3. Add Genres to our Book form
 

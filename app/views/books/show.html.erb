@@ -9,6 +9,9 @@
 
     <h2><%= @book.title %> by <%= @book.author_name %></h2>
     <p><%= @book.snippet %></p>
+    <% @book.genres.each do |genre| %>
+      <p><%= genre.name %></p>
+    <% end %>
 
     <a href="/books">Back to All Books</a>
     <a href="/books/<%= @book.id %>/edit">Edit This Book</a>
