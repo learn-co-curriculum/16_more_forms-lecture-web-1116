@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Books</title>
+  </head>
+  <body>
+    <h1>Books Edit Page</h1>
+
+    <form action="/books/<%= @book.id%>" method="POST">
+      <input type="hidden" name="_method" value="PATCH">
+      <label for="title">Title</label>
+      <input type="text" name="book[title]" value="<%= @book.title %>">
+      <label for="title">Snippet</label>
+      <input type="text" name="book[snippet]" value="<%= @book.snippet %>">
+      <input type="submit" value="Update Book">
+    </form>
+  </body>
+</html>
